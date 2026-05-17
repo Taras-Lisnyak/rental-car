@@ -228,13 +228,15 @@ return (
   </div>
 
         {data?.hasNextPage && (
-          <button
-            onClick={() => fetchNextPage()}
-            disabled={isFetchingNextPage}
-            className={styles.loadMore}
-          >
-            {isFetchingNextPage ? "Loading..." : "Load More"}
-          </button>
+          <div className={styles.loadMoreWrapper}>
+            <button
+              onClick={() => fetchNextPage()}
+              disabled={isFetchingNextPage}
+              className={styles.loadMore}
+            >
+              {isFetchingNextPage ? "Loading..." : "Load More"}
+            </button>
+          </div>
         )}
       </div>
   </main>

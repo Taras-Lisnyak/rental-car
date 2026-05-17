@@ -75,16 +75,11 @@ a {
 
 
 button {
-  background-color: var(--button);
-  color: var(--white);
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
-button:hover {
-  background-color: var(--button-hover);
-}
 
 button,
 input,

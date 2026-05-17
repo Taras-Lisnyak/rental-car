@@ -19,10 +19,12 @@ export default function CarCard({ car }: { car: Car }) {
         />
         )}
         <div className={styles.cardInfo}>
-          <h3 className={styles.title}>
-            {car.brand} <span className={styles.model}>{car.model}</span>, {car.year}
-          </h3>
-          <p className={styles.price}>${car.rentalPrice}</p>
+          <div className={styles.titleSection}>
+            <p className={styles.title}>
+              {car.brand} <span className={styles.model}>{car.model}</span>, {car.year}
+            </p>
+            <p className={styles.price}>${car.rentalPrice}</p>
+          </div>
           <div className={styles.locationDetails}>
             <p className={styles.location}>
               {car.location.city}, {car.location.country} | {car.rentalCompany}

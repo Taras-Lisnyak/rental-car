@@ -8,70 +8,84 @@
   width: 276px;          
   max-width: 276px;      
   box-sizing: border-box; 
-  justify-content: space-between;
-  align-items: center;
 }
 
 .cardContent {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  width: 244px;     /* ширина з макету */
+  height: 364px;    /* висота з макету */          /* дозволяє контенту займати всю висоту картки */
+  box-sizing: border-box;
+  gap: 16px;        /* відстань між елементами */
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
+  width: 244px;    
+  height: 268px;  
+  border-radius: 14px; 
+  display: block;
 }
 
 .cardInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 8px 0;
+  display: inline-block;
 }
 
+.titleSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 4px 0;
-  color: #222;
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+color: var(--main);
+  white-space: nowrap; 
+  letter-spacing: -1.7px;
 }
 
 .price {
-  font-size: 16px;
-  font-weight: 500; 
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.25;
+color: var(--main);
+letter-spacing: -1,5px;
 }
 
 .model {
-  color: #0070f3; 
-  font-weight: 600;
+  color: var(--light-blue);
+  font-weight: 500;
+  letter-spacing: -2px;
 }
 
 .locationDetails {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 6px;
-  font-size: 14px;
-  flex-wrap: wrap;
+  display: inline-block;
+  margin-top: 16px;
+  border-radius: 8px;
+  width: 100%;
+background: var(--bg);
 }
 
 .location {
-  color: #555;
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+color: var(--main);
 }
 
 .details {
-  color: #777;
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+color: var(--main);
 }
 
-.text {
-  font-size: 0.9rem;
-  color: #555;
-}
 
 .buttonLink {
   display: flex;
@@ -82,7 +96,7 @@
   background-color: var(--light-blue); 
   color: var(--white);              
   text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
+  /* transition: background-color 0.2s ease-in-out; */
   border-radius: 12px;
   padding: 12px 99px;
   font-family: var(--font-family);
@@ -92,8 +106,9 @@
   text-align: center;
   margin: 0 auto;
   white-space: nowrap; /* запобігає переносу тексту */
+  margin-top: auto;
 }
 
 .buttonLink:hover {
-  background-color: #005bb5; 
+  background-color:  var(--dark-blue);
 }
