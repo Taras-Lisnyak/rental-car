@@ -41,7 +41,7 @@
   font-family: var(--font-family);
 font-weight: 500;
 font-size: 16px;
-line-height: 125%;
+line-height: 1.25;
 color: var(--main);
   white-space: nowrap; 
   letter-spacing: -1.7px;
@@ -96,7 +96,7 @@ color: var(--main);
   background-color: var(--light-blue); 
   color: var(--white);              
   text-decoration: none;
-  /* transition: background-color 0.2s ease-in-out; */
+  transition: background-color 0.2s ease-in-out;
   border-radius: 12px;
   padding: 12px 99px;
   font-family: var(--font-family);

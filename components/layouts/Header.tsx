@@ -1,9 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  // Логіка активних лінків
+  const isHomeActive = pathname === "/";
+  const isCatalogActive = pathname === "/catalog";
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -13,8 +20,18 @@ export default function Header() {
           </svg>
         </div>
         <nav className={styles.nav}>
-          <Link href="/" className={styles.link}>Home</Link>
-          <Link href="/catalog" className={styles.link}>Catalog</Link>
+          <Link
+            href="/"
+            className={`${styles.link} ${isHomeActive ? styles.active : ""}`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/catalog"
+            className={`${styles.link} ${isCatalogActive ? styles.active : ""}`}
+          >
+            Catalog
+          </Link>
         </nav>
       </div>
     </header>

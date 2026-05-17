@@ -1,52 +1,106 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
-}
 
 .pageContainer {
+  width: 100%;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 2rem;
 }
 
+/* Hero банер */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 700px; /* висота для десктопу */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay чорний шар */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  opacity: 0.2; /* 20% як у Figma */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: absolute;   /* тепер блок позиціонується всередині hero */
+  bottom: 60px;         /* відстань до нижнього краю */
+  left: 50%;            /* центрування по горизонталі */
+  transform: translateX(-50%); /* щоб вирівняти по центру */
+  z-index: 2;           /* вище за overlay */
+  text-align: center;
+  color: #ffffff;
+  width: 783px;         /* як у макеті */
+  height: 204px;        /* як у макеті */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContent {
+  width: 783px;
+height: 120px;
+display: inline-block;
+margin-bottom: 40px;
+}
+
+/* Текст */
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-family: var(--font-family);
+font-weight: 700;
+font-size: 60px;
+line-height: 1.20;
+text-align: center;
+color: var(--white);
+width: 100%;
+white-space: nowrap;
+margin-bottom: 16px;
 }
 
 .subtitle {
-  margin-bottom: 2rem;
-  color: #555;
+  display: inline-block;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 24px;
+line-height: 1.33;
+text-align: center;
+color: var(--white);
 }
 
+/* Кнопка */
 .button {
-  padding: 0.75rem 1.5rem;
-  background-color: #2563eb;
-  color: white;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+padding: 12px 99px;
+width: 276px;
+height: 44px;
+background: var(--light-blue);
+  transition: background-color 0.2s ease;
   text-decoration: none;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 1.25;
+color: var(--white);
+text-align: center;
+white-space: nowrap;
+margin-top: auto
 }
 
 .button:hover {
-  background-color: #1e40af;
+  background-color: #0059c1;
 }
