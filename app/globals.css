@@ -1,34 +1,30 @@
 @import 'modern-normalize';
 
 :root {
-  --color-dark: #101828;
-  --color-white: #ffffff;
-  --color-light-grayish: #F2F4F7;
-  --color-light-gray: #F5F5F5;
-  --color-very-light-gray: #F7F7F7;
-  --color-pale-gray: #DADDE1;
-  --color-medium-gray: #8D929A;
-  --color-cyan: #00AAD4;
-  --color-cyan-dark: #0095BA;
-
-  --button-bg: var(--color-cyan);
-  --button-bg-hover: var(--color-cyan-dark);
-  --button-text: var(--color-white);
-  --button-radius: 8px;
-  --button-padding: 12px 24px;
-  --button-font-size: 16px;
-  --button-font-weight: 600;
+	--main: #101828;
+	--gray: #8d929a;
+	--gray-light: #dadde1;
+	--badges: #f2f4f7;
+	--inputs: #f7f7f7;
+	--white: #fff;
+	--button: #3470ff;
+	--button-hover: #0b44cd;
+	--light-blue: #00aad4;
+	--bg: #f5f5f5;
+	--dark-blue: #0095ba;
+  --font-family: var(--font-manrope), sans-serif;
+  --second-family: var(--font-inter), sans-serif;
 }
+
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.5;
-  background-color: var(--color-white);
-  color: var(--color-dark);
+  background-color: var(--white);
+  color: var(--main);
   margin: 0;
 }
-
 .container {
   width: 100%;
   max-width: 1440px;
@@ -41,6 +37,10 @@ body {
 html,
 body {
   height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 img,
@@ -75,19 +75,15 @@ a {
 
 
 button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  padding: var(--button-padding);
+  background-color: var(--button);
+  color: var(--white);
   border: none;
-  border-radius: var(--button-radius);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: var(--button-bg-hover);
+  background-color: var(--button-hover);
 }
 
 button,

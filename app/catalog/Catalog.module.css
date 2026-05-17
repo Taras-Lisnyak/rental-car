@@ -174,19 +174,18 @@ align-items: center;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: nowrap;
-  row-gap: 48px;   
-  column-gap: 32px;       /* замість column-gap */
-  justify-content: flex-start; 
-  width: 100%;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 276px); /* чітко 276px */
+  gap: 32px;
+  justify-content: center; /* центрує сітку */
 }
 
+
 .grid > * {
-  box-sizing: border-box; /* ширина включає padding і border */
-  width: 276px;
-  height: 464px;    /* тепер входить у 276px */
+  box-sizing: border-box;
+  width: 276px;   /* чітка ширина */
+  height: 464px;
+  overflow: hidden;
 }
 
 .loadMore {
