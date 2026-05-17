@@ -5,43 +5,53 @@ import { useCars } from "@/hooks/useCars";
 import CarCard from "@/components/ui/CarCard";
 import styles from "./Catalog.module.css";
 
-export default function CatalogPage() {
-  const [filters, setFilters] = useState({
-    brand: "",
-    price: "",
-    minMileage: "",
-    maxMileage: "",
-  });
+type Filters = {
+  brand?: string;
+  price?: number;
+  minMileage?: number;
+  maxMileage?: number;
+};
 
-  const [appliedFilters, setAppliedFilters] = useState(filters);
+export default function CatalogPage() {
+  const [filters, setFilters] = useState<Filters>({});
+  const [appliedFilters, setAppliedFilters] = useState<Filters>({});
 
   const { data, fetchNextPage, isFetchingNextPage, refetch } = useCars(appliedFilters);
 
   const handleFilterChange = (
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
   ) => {
-    setFilters({ ...filters, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    setFilters((prev) => ({
+      ...prev,
+      [name]:
+        name === "price" || name === "minMileage" || name === "maxMileage"
+          ? value === "" ? undefined : Number(value)
+          : value || undefined,
+    }));
   };
 
   const handleClear = () => {
-    const cleared = { brand: "", price: "", minMileage: "", maxMileage: "" };
-    setFilters(cleared);
-    setAppliedFilters(cleared);
-    refetch(); 
+    setFilters({});
+    setAppliedFilters({});
+    refetch();
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    setAppliedFilters(filters); 
+    setAppliedFilters(filters);
     refetch();
   };
 
+  const [openSelect, setOpenSelect] = useState<{ brand: boolean; price: boolean }>({
+    brand: false,
+    price: false,
+  });
+  
   const [price, setPrice] = useState("");
   
-  const [openSelect, setOpenSelect] = useState<{brand: boolean; price: boolean}>({
-  brand: false,
-  price: false,
-});
+
 
 return (
   <main className={styles.mainSection}>
