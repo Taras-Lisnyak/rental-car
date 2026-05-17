@@ -1,0 +1,97 @@
+@import 'modern-normalize';
+
+:root {
+  --color-dark: #101828;
+  --color-white: #ffffff;
+  --color-light-grayish: #F2F4F7;
+  --color-light-gray: #F5F5F5;
+  --color-very-light-gray: #F7F7F7;
+  --color-pale-gray: #DADDE1;
+  --color-medium-gray: #8D929A;
+  --color-cyan: #00AAD4;
+  --color-cyan-dark: #0095BA;
+
+  --button-bg: var(--color-cyan);
+  --button-bg-hover: var(--color-cyan-dark);
+  --button-text: var(--color-white);
+  --button-radius: 8px;
+  --button-padding: 12px 24px;
+  --button-font-size: 16px;
+  --button-font-weight: 600;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 120px;
+  padding-right: 120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--button-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-bg-hover);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}

@@ -1,0 +1,277 @@
+.mainSection {
+  background-color: #F2F4F7;
+}
+
+.mainSection :global(.container) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 84px;
+  padding-bottom: 104px;
+  margin: 0 auto;      /* центрує */
+  max-width: 1440px;   /* обмежує ширину */
+  width: 100%;         /* займає всю доступну ширину */
+  box-sizing: border-box;
+  padding-left: 120px; /* відступ зліва */
+  padding-right: 120px; /* відступ справа */
+}
+
+.filtersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.gridWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;      /* відступ між блоками */
+  width: 100%;
+}
+
+.filtersForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 924px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 96px;
+}
+
+
+
+.filtersTitle {
+  width: 100%;
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.filterGroupOne {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
+  min-width: 0;  /* прибирає жорстке обмеження */
+  max-width: 204px; /* встановлює максимальну ширину для кожної групи */
+}
+
+.filterGroupTwo { 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
+  min-width: 0; 
+  max-width: 194px; 
+}
+
+.filterGroupThree { 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
+  min-width: 0; 
+  max-width: 320px; 
+}
+
+.filterGroupFour {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-end; /* опускає внутрішні елементи вниз */
+  align-items: flex-end;     /* вирівнює по правому краю */
+  height: 100%; 
+  margin-top: 24px;             /* щоб було куди "опускати" */
+}
+
+.buttonsGroup { 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.label {
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 133%;
+color: var(--gray);
+max-width: 204px;
+}
+
+.input {
+  max-width: 160px;
+  height: 44px;
+}
+
+.select {
+  max-width: 204px;
+  height: 44px;
+}
+
+.select,
+.input {
+  padding: 10px 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.mileageGroup {
+  display: flex;
+  gap: 0px;
+  max-width: 320px;
+}
+
+.button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-width: 156px;
+  height: 44px;
+}
+
+.button:hover {
+  background-color: #1e4ed8;
+}
+
+.clear {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  min-width: 156px;
+  text-align: center;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+color: var(--gray);
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+  row-gap: 48px;   
+  column-gap: 32px;       /* замість column-gap */
+  justify-content: flex-start; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid > * {
+  box-sizing: border-box; /* ширина включає padding і border */
+  width: 276px;
+  height: 464px;    /* тепер входить у 276px */
+}
+
+.loadMore {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-width: 156px;
+  height: 44px;
+}
+
+.loadMore:hover {
+  background-color: #1e4ed8;
+}
+
+.button,
+.clear {
+  flex-shrink: 0; /* кнопки не стискаються */
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 40px 10px 13px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  appearance: none; /* прибирає дефолтну стрілку */
+}
+
+/* коли є вибране значення — приховуємо цифру */
+.select.hasValue {
+  color: transparent;
+}
+
+/* список опцій у випадаючому меню */
+.select option {
+  color: #333; /* робить опції видимими */
+}
+
+
+/* .selectWrapper::after {
+  content: url("data:image/svg+xml;utf8,<svg fill='%23333' height='14' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l3 3 3-3z'/></svg>");
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+  color: #333;
+} */
+
+
+.selectOverlay {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* .selectWrapper.open::after {
+  content: "▲";
+} */
+
+.icon {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 14px;
+  height: 14px;
+  fill: #333;
+}
