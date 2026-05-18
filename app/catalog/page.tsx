@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useCars } from "@/hooks/useCars";
+import { Car } from "@/types";
 import CarCard from "@/components/ui/CarCard";
 import styles from "./Catalog.module.css";
 
@@ -48,10 +49,14 @@ export default function CatalogPage() {
     price: false,
   });
 
-  const [price, setPrice] = useState("");
-  
+  const carChunks = data?.cars.reduce((acc: Car[][], car: Car, index: number) => {
+    const chunkIndex = Math.floor(index / 4);
+    if (!acc[chunkIndex]) acc[chunkIndex] = [];
+    acc[chunkIndex].push(car);
+    return acc;
+  }, [] as Car[][]) ?? [];
 
-return (
+  return (
   <main className={styles.mainSection}>
     <div className="container">
       <div className={styles.filtersWrapper}>
@@ -108,6 +113,8 @@ return (
       className={`${styles.select} ${filters.price ? styles.hasValue : ""}`}
     >
           <option value="">Choose price</option>
+          <option value="10">10</option>
+          <option value="20">20</option>          
           <option value="30">30</option>
           <option value="40">40</option>
           <option value="50">50</option>
@@ -118,21 +125,13 @@ return (
           <option value="100">100</option>
           <option value="110">110</option>
           <option value="120">120</option>
-          <option value="130">130</option>
-          <option value="140">140</option>
-          <option value="150">150</option>
-          <option value="160">160</option>
-          <option value="170">170</option>
-          <option value="180">180</option>
-          <option value="190">190</option>
-          <option value="200">200</option>
                 </select>
                 {filters.price && (
       <span className={styles.selectOverlay}>To ${filters.price}</span>
                 )}
                 
                 <svg className={styles.icon}>
-    <use xlinkHref={openSelect.brand ? "/sprite.svg#icon-Vector" : "/sprite.svg#icon-Vector-1"}></use>
+    <use xlinkHref={openSelect.price ? "/sprite.svg#icon-Vector" : "/sprite.svg#icon-Vector-1"}></use>
   </svg>
   </div>
       </div>
@@ -173,21 +172,14 @@ return (
       </div>
 
       <div className={styles.gridWrapper}>
-    {data?.cars
-      .reduce((acc: any[][], car: any, index: number) => {
-        const chunkIndex = Math.floor(index / 4);
-        if (!acc[chunkIndex]) acc[chunkIndex] = [];
-        acc[chunkIndex].push(car);
-        return acc;
-      }, [])
-      .map((chunk, i) => (
-        <div key={i} className={styles.grid}>
-          {chunk.map((car) => (
-            <CarCard key={car.id} car={car} />
-          ))}
-        </div>
-      ))}
-  </div>
+        {carChunks.map((chunk, i) => (
+          <div key={i} className={styles.grid}>
+            {chunk.map((car) => (
+              <CarCard key={car.id} car={car} />
+            ))}
+          </div>
+        ))}
+      </div>
 
         {data?.hasNextPage && (
           <div className={styles.loadMoreWrapper}>

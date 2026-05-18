@@ -59,10 +59,21 @@ export default function CarDetailsPage() {
       startDate: "",
       endDate: "",
     });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Booking error:", err);
-    if (err.response?.data?.message) {
-      toast.error(err.response.data.message);
+
+    type ApiError = {
+      response?: {
+        data?: {
+          message?: string;
+        };
+      };
+    };
+
+    const apiError = err as ApiError;
+
+    if (apiError.response?.data?.message) {
+      toast.error(apiError.response.data.message);
     } else {
       toast.error("❌ Помилка при оформленні оренди. Спробуйте ще раз.");
     }
@@ -135,9 +146,9 @@ return (
         {car.brand} {car.model}, {car.year}
       </h2>
       <p className={styles.location}>
-        <FaMapMarkerAlt color="#2563eb" /> {car.location.city}, {car.location.country}
+        <FaMapMarkerAlt color="var(--main)" /> {car.location.city}, {car.location.country}
       </p>
-      <p className={styles.price}>💲 ${car.rentalPrice}</p>
+      <p className={styles.price}> ${car.rentalPrice}</p>
       <p className={styles.description}>
         {car.description ||
           `${car.brand} ${car.model} — стильний і просторий автомобіль, який забезпечує комфортну поїздку та має розкішні характеристики.`}
@@ -148,23 +159,23 @@ return (
       <ul className={styles.list}>
         {car.rentalConditions.map((c, i) => (
           <li key={i}>
-            <FaCheckCircle color="#2563eb" /> {c}
+            <FaCheckCircle color="var(--main)" /> {c}
           </li>
         ))}
       </ul>
       <h3 className={styles.subtitle}>Car Specifications:</h3>
       <ul className={styles.list}>
-        <li><FaCalendarAlt color="#2563eb" /> Year: {car.year}</li>
-        <li><FaCarSide color="#2563eb" /> Type: {car.type}</li>
-        <li><FaGasPump color="#2563eb" /> Fuel Consumption: {car.fuelConsumption} L/100km</li>
-        <li><FaCogs color="#2563eb" /> Engine: {car.engine}</li>
-        <li><FaRoad color="#2563eb" /> Mileage: {car.mileage} km</li>
+        <li><FaCalendarAlt color="var(--main)" /> Year: {car.year}</li>
+        <li><FaCarSide color="var(--main)" /> Type: {car.type}</li>
+        <li><FaGasPump color="var(--main)" /> Fuel Consumption: {car.fuelConsumption} L/100km</li>
+        <li><FaCogs color="var(--main)" /> Engine: {car.engine}</li>
+        <li><FaRoad color="var(--main)" /> Mileage: {car.mileage} km</li>
       </ul>
       <h3 className={styles.subtitle}>Features:</h3>
       <ul className={styles.list}>
         {car.features.map((f, i) => (
           <li key={i}>
-            <FaCheckCircle color="#2563eb" /> {f}
+            <FaCheckCircle color="var(--main)" /> {f}
           </li>
         ))}
       </ul>
