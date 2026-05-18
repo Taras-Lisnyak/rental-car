@@ -1,8 +1,8 @@
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--gray-light);
   border-radius: 8px;
   padding: 16px;
-  background: #fff;
+  background: var(--white);
   display: flex;
   flex-direction: column;
   width: 276px;          
