@@ -13,7 +13,7 @@ export const fetchCars = async (
   if (filters?.maxMileage) params.maxMileage = filters.maxMileage;
 
   const { data } = await axios.get("https://car-rental-api.goit.study/cars", { params });
-  return data; // тут буде { cars: [...], totalCars, page, totalPages }
+  return data; 
 };
 
 

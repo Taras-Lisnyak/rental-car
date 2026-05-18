@@ -44,7 +44,7 @@
   object-fit: cover;
   max-width: 640px;
   width: 100%;
-  height: 512px; /* висота з макету */
+  height: 512px; 
 }
 
 .info {
@@ -145,8 +145,6 @@ color: var(--gray);
 min-height: 20px;
 }
 
-.bookingForm {
-}
 
 .form {
   display: flex;

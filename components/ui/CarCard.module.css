@@ -13,10 +13,10 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  width: 244px;     /* ширина з макету */
-  height: 364px;    /* висота з макету */          /* дозволяє контенту займати всю висоту картки */
+  width: 244px;     
+  height: 364px;             
   box-sizing: border-box;
-  gap: 16px;        /* відстань між елементами */
+  gap: 16px;        
 }
 
 .image {
@@ -89,8 +89,8 @@ color: var(--main);
 
 .buttonLink {
   display: flex;
-  align-items: center;    /* вертикальне центрування */
-  justify-content: center; /* горизонтальне центрування */
+  align-items: center;    
+  justify-content: center; 
   width: 244px;
   height: 44px;
   background-color: var(--light-blue); 
@@ -105,7 +105,7 @@ color: var(--main);
   line-height: 1.25;
   text-align: center;
   margin: 0 auto;
-  white-space: nowrap; /* запобігає переносу тексту */
+  white-space: nowrap; 
   margin-top: auto;
 }
 

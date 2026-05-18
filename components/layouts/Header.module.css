@@ -30,9 +30,6 @@
   transition: color 0.2s ease;
 }
 
-/* .link:hover {
-  color: #2563eb;
-} */
 
 .active {
   color: #2563eb; /* той самий синій, що у логотипі */

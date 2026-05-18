@@ -7,12 +7,12 @@
   flex-direction: column;
   padding-top: 84px;
   padding-bottom: 104px;
-  margin: 0 auto;      /* центрує */
-  max-width: 1440px;   /* обмежує ширину */
-  width: 100%;         /* займає всю доступну ширину */
+  margin: 0 auto;      
+  max-width: 1440px;   
+  width: 100%;         
   box-sizing: border-box;
-  padding-left: 120px; /* відступ зліва */
-  padding-right: 120px; /* відступ справа */
+  padding-left: 120px; 
+  padding-right: 120px; 
 }
 
 .filtersWrapper {
@@ -26,7 +26,7 @@
 .gridWrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 48px;      /* відступ між блоками */
+  row-gap: 48px;      
   width: 100%;
 }
 
@@ -65,16 +65,16 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
-  min-width: 0;  /* прибирає жорстке обмеження */
-  max-width: 204px; /* встановлює максимальну ширину для кожної групи */
+  flex: 1;       
+  min-width: 0;  
+  max-width: 204px; 
 }
 
 .filterGroupTwo { 
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
+  flex: 1;       
   min-width: 0; 
   max-width: 194px; 
 }
@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;       /* дозволяє групам рівномірно розтягуватись */
+  flex: 1;     
   min-width: 0; 
   max-width: 320px; 
 }
@@ -92,10 +92,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  justify-content: flex-end; /* опускає внутрішні елементи вниз */
-  align-items: flex-end;     /* вирівнює по правому краю */
+  justify-content: flex-end; 
+  align-items: flex-end;     
   height: 100%; 
-  margin-top: 24px;             /* щоб було куди "опускати" */
+  margin-top: 24px;          
 }
 
 .buttonsGroup { 
@@ -175,23 +175,23 @@ align-items: center;
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 276px); /* чітко 276px */
+  grid-template-columns: repeat(4, 276px); 
   gap: 32px;
-  justify-content: center; /* центрує сітку */
+  justify-content: center; 
 }
 
 
 .grid > * {
   box-sizing: border-box;
-  width: 276px;   /* чітка ширина */
+  width: 276px;   
   height: 464px;
   overflow: hidden;
 }
 
 .loadMoreWrapper {
   display: flex;
-  justify-content: center; /* центрує кнопку по горизонталі */
-  margin-top: 48px;        /* відступ від .gridWrapper */
+  justify-content: center; 
+  margin-top: 48px;        
 }
 
 .loadMore {
@@ -235,30 +235,19 @@ color: var(--main)
   border: 1px solid #ccc;
   border-radius: 6px;
   background: #fff;
-  appearance: none; /* прибирає дефолтну стрілку */
+  appearance: none; 
 }
 
-/* коли є вибране значення — приховуємо цифру */
 .select.hasValue {
   color: transparent;
 }
 
-/* список опцій у випадаючому меню */
+
 .select option {
-  color: #333; /* робить опції видимими */
+  color: #333; 
 }
 
 
-/* .selectWrapper::after {
-  content: url("data:image/svg+xml;utf8,<svg fill='%23333' height='14' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l3 3 3-3z'/></svg>");
-  position: absolute;
-  right: 13px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 14px;
-  color: #333;
-} */
 
 
 .selectOverlay {
@@ -272,9 +261,6 @@ color: var(--main)
   color: #333;
 }
 
-/* .selectWrapper.open::after {
-  content: "▲";
-} */
 
 .icon {
   position: absolute;

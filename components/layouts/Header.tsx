@@ -7,7 +7,6 @@ import styles from "./Header.module.css";
 export default function Header() {
   const pathname = usePathname();
 
-  // Логіка активних лінків
   const isHomeActive = pathname === "/";
   const isCatalogActive = pathname === "/catalog";
 

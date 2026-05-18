@@ -6,11 +6,11 @@
   flex-direction: column;
 }
 
-/* Hero банер */
+
 .hero {
   position: relative;
   width: 100%;
-  height: 700px; /* висота для десктопу */
+  height: 700px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,26 +23,26 @@
   height: 100%;
 }
 
-/* Overlay чорний шар */
+
 .overlay {
   position: absolute;
   inset: 0;
   background-color: #000000;
-  opacity: 0.2; /* 20% як у Figma */
+  opacity: 0.2; 
   z-index: 1;
   pointer-events: none;
 }
 
 .heroContent {
-  position: absolute;   /* тепер блок позиціонується всередині hero */
-  bottom: 60px;         /* відстань до нижнього краю */
-  left: 50%;            /* центрування по горизонталі */
-  transform: translateX(-50%); /* щоб вирівняти по центру */
-  z-index: 2;           /* вище за overlay */
+  position: absolute;   
+  bottom: 60px;         
+  left: 50%;            
+  transform: translateX(-50%); 
+  z-index: 2;           
   text-align: center;
   color: #ffffff;
-  width: 783px;         /* як у макеті */
-  height: 204px;        /* як у макеті */
+  width: 783px;         
+  height: 204px;        
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +56,7 @@ display: inline-block;
 margin-bottom: 40px;
 }
 
-/* Текст */
+
 .title {
   font-family: var(--font-family);
 font-weight: 700;
@@ -79,7 +79,7 @@ text-align: center;
 color: var(--white);
 }
 
-/* Кнопка */
+
 .button {
   display: flex;
   justify-content: center;
