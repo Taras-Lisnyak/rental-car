@@ -1,6 +1,6 @@
 .header {
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--badges);
 }
 
 .header :global(.container) {
@@ -15,7 +15,6 @@
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #2563eb;
 }
 
 .nav {
@@ -25,12 +24,13 @@
 
 .link {
   font-size: 16px;
-  color: #333;
+  color: var(--main);
   text-decoration: none;
   transition: color 0.2s ease;
+  font-family: var(--font-family);
 }
 
 
 .active {
-  color: #2563eb; /* той самий синій, що у логотипі */
+  color: var(--light-blue);
 }

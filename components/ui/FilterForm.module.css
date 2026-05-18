@@ -5,19 +5,19 @@
 }
 
 .input {
-  border: 1px solid #ccc;
+  border: 1px solid var(--inputs);
   padding: 0.5rem;
   border-radius: 6px;
 }
 
 .button {
   padding: 0.5rem 1rem;
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--button);
+  color: var(--white);
   border-radius: 6px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #1e40af;
+  background-color: var(--button-hover);
 }

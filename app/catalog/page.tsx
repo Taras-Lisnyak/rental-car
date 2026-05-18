@@ -67,7 +67,7 @@ export default function CatalogPage() {
               <div className={`${styles.selectWrapper} ${openSelect.brand ? styles.open : ""}`}>
         <select
           name="brand"
-          value={filters.brand}
+          value={filters.brand ?? ""}
                   onChange={handleFilterChange}
                   onFocus={() => setOpenSelect({ ...openSelect, brand: true })}
       onBlur={() => setOpenSelect({ ...openSelect, brand: false })}
@@ -106,7 +106,7 @@ export default function CatalogPage() {
               <div className={`${styles.selectWrapper} ${openSelect.price ? styles.open : ""}`}>
          <select
       name="price"
-      value={filters.price}
+      value={filters.price ?? ""}
                   onChange={handleFilterChange}
                   onFocus={() => setOpenSelect({ ...openSelect, price: true })}
       onBlur={() => setOpenSelect({ ...openSelect, price: false })}
@@ -142,7 +142,7 @@ export default function CatalogPage() {
           <input
             type="number"
             name="minMileage"
-            value={filters.minMileage}
+            value={filters.minMileage ?? ""}
             onChange={handleFilterChange}
             placeholder="From"
             className={styles.input}
@@ -150,7 +150,7 @@ export default function CatalogPage() {
           <input
             type="number"
             name="maxMileage"
-            value={filters.maxMileage}
+            value={filters.maxMileage ?? ""}
             onChange={handleFilterChange}
             placeholder="To"
             className={styles.input}
