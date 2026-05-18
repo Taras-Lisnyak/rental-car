@@ -40,7 +40,7 @@
   transform: translateX(-50%); 
   z-index: 2;           
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   width: 783px;         
   height: 204px;        
   display: flex;
@@ -102,5 +102,5 @@ margin-top: auto
 }
 
 .button:hover {
-  background-color: #0059c1;
+  background-color: var(--dark-blue);
 }
