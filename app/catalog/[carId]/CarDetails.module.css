@@ -8,6 +8,7 @@
   flex-direction: row;
   gap: 32px;   
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .mainSectionDetails {
@@ -19,14 +20,16 @@
   flex-direction: row;
   gap: 32px;
   align-items: flex-start;
-  padding: 84 120 176;
+  padding: 84px 120px 176px 120px;
 }
 
 .carSection {
   display: flex;
   flex-direction: column; 
-  gap: 32px;
   max-width: 640px;
+  width: 100%;
+  row-gap: 32px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -40,6 +43,8 @@
   border-radius: 8px;
   object-fit: cover;
   max-width: 640px;
+  width: 100%;
+  height: 512px; /* висота з макету */
 }
 
 .info {
@@ -74,7 +79,6 @@
 .helperText {
   font-size: 15px;
   color: #666;
-  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -107,26 +111,49 @@
 .bookingContainer {
   display: flex;
   flex-direction: column; 
-  gap: 32px;
   background: #f9fafb;
-  border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 32px;
   max-width: 640px;
+  width: 100%;
 }
 
 .bookingInfo {
-  flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+min-height: 24px;
+line-height: 1.20;
+color: var(--main);
+margin-top: 0;
+margin-bottom: 8px;
+}
+
+.helperText {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.25;
+color: var(--gray);
+min-height: 20px;
 }
 
 .bookingForm {
-  flex: 1;
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -136,21 +163,27 @@
   padding: 12px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
+  min-height: 48px;
 }
 
 .textarea {
-  min-height: 100px;
+  min-height: 88px;
   resize: vertical;
 }
 
 .button {
-  background-color: #2563eb;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
+  border-radius: 12px;
+padding: 12px 99px;
+width: 576px;
+height: 44px;
+background: var(--light-blue);
   cursor: pointer;
-  font-weight: 600;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 1.25;
+color: var(--white);
+margin-top: 24px;
 }
 
 .button:hover {
@@ -158,8 +191,7 @@
 }
 
 .details {
-  background: #f9fafb;       
-  border: 1px solid #e5e7eb;  
+  background: #f9fafb;         
   border-radius: 12px;
   padding-top: 32px;
   padding-left: 24px;

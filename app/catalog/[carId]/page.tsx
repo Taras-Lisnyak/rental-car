@@ -92,34 +92,36 @@ return (
         </div>
         <div className={styles.bookingForm}>
           <form onSubmit={handleSubmit} className={styles.form}>
-            <input
-              type="text"
-              placeholder="Name*"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              className={styles.input}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email*"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              className={styles.input}
-              required
-            />
-            <textarea
-              placeholder="Comment"
-              value={formData.comment}
-              onChange={(e) =>
-                setFormData({ ...formData, comment: e.target.value })
-              }
-              className={styles.textarea}
-            />
+            <div className={styles.formGroup}>
+              <input
+                type="text"
+                placeholder="Name*"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className={styles.input}
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email*"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className={styles.input}
+                required
+              />
+              <textarea
+                placeholder="Comment"
+                value={formData.comment}
+                onChange={(e) =>
+                  setFormData({ ...formData, comment: e.target.value })
+                }
+                className={styles.textarea}
+              />
+            </div>
             <button type="submit" className={styles.button}>
               Send
             </button>
