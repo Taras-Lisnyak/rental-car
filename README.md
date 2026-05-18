@@ -36,3 +36,23 @@ npm run dev
 npm run build
 npm start
 ```
+
+## 👨‍💻 Автор
+
+**Taras** — фронтенд‑розробник з досвідом роботи з **Next.js**, **TypeScript**,
+та інтеграцією REST API.  
+Основні інтереси: архітектура фронтенду, оптимізація проєктної структури, та
+побудова повних інтеграцій між frontend і backend.
+
+### 🔹 Навички
+
+- Frontend management
+- Backend API інтеграція (Express, REST)
+- Практичне дебагінг та оптимізація робочих процесів
+- TypeScript інтерфейси та контрактне узгодження
+- CSS responsive design, flex/grid оптимізація
+
+### 📫 Контакти
+
+- Email: **taras4lisnyak@gmail.com**
+- GitHub: [github.com/Taras-Lisnyak](https://github.com/Taras-Lisnyak)
