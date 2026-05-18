@@ -25,6 +25,7 @@ body {
   color: var(--main);
   margin: 0;
 }
+
 .container {
   width: 100%;
   max-width: 1440px;

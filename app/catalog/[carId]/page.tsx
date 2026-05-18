@@ -155,24 +155,24 @@ return (
       </p>
     </div>
     <div className={styles.detailsBody}>
-      <h3 className={styles.subtitle}>Rental Conditions:</h3>
-      <ul className={styles.list}>
+      <p className={styles.subtitleListOne}>Rental Conditions:</p>
+      <ul className={styles.listOne}>
         {car.rentalConditions.map((c, i) => (
           <li key={i}>
             <FaCheckCircle color="var(--main)" /> {c}
           </li>
         ))}
       </ul>
-      <h3 className={styles.subtitle}>Car Specifications:</h3>
-      <ul className={styles.list}>
+      <p className={styles.subtitleListTwo}>Car Specifications:</p>
+      <ul className={styles.listTwo}>
         <li><FaCalendarAlt color="var(--main)" /> Year: {car.year}</li>
         <li><FaCarSide color="var(--main)" /> Type: {car.type}</li>
         <li><FaGasPump color="var(--main)" /> Fuel Consumption: {car.fuelConsumption} L/100km</li>
         <li><FaCogs color="var(--main)" /> Engine: {car.engine}</li>
         <li><FaRoad color="var(--main)" /> Mileage: {car.mileage} km</li>
       </ul>
-      <h3 className={styles.subtitle}>Features:</h3>
-      <ul className={styles.list}>
+      <p className={styles.subtitleListThree}>Features:</p>
+      <ul className={styles.listThree}>
         {car.features.map((f, i) => (
           <li key={i}>
             <FaCheckCircle color="var(--main)" /> {f}
